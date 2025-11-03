@@ -1,0 +1,43 @@
+volumes:
+  prepadata:
+
+networks:
+  prepanet:
+
+services:
+
+  # service de bdd (base de donnee)
+  prepamaria:
+
+    #image du service
+    image: mariadb:latest
+    #nome le container:
+    container_name: mariaprepa
+    #definition des relations de ports 
+    ports:
+      - "3315:3306"
+      #declaration de variables d'environement 
+    environment:
+      TZ: UTC+2
+      MARIADB_ROOT_PASSWORD: prepa2025
+      MARIADB_DATABASE: prepabase
+      MARIADB_USER: prepa
+      MARIADB_PASSWORD: prepa2025
+    restart: always
+    volumes: 
+      - prepadata:/var/lib/mysql
+    networks:
+      - prepanet
+
+#Serveur Node
+  prepanode:
+    build:
+     context: ./node
+    container_name: nodeprepa
+    volumes:
+      - ./app:/var/www/html
+    networks:
+     - prepanet
+    tty: true
+    environment:
+     TZ: UTC+2
