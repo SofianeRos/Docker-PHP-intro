@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #3F5EFB;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+
+}
+
+h1 {
+    color: rgb(253, 253, 255);
+    margin-bottom: 20px;
+
+}
