@@ -13,7 +13,7 @@ var_dump($array);
 
 $concatenation = "Bonjour $prenom $nom";
 
-// condition if else 
+//! condition if else 
 
 if ($age >= 18) {
     echo "Tu es majeur";
@@ -21,7 +21,7 @@ if ($age >= 18) {
     echo "Tu es mineur";
 }
 
-// condition if else if else 
+//! condition if else if else 
 
 $couleur1 = "rouge";
 $couleur2 = "bleu";
@@ -34,17 +34,17 @@ if ($couleur1 == "rouge" && $couleur2 == "bleu") {
     echo "aucune couleur n'est bonne ";
 }
 
-//tableaux
+//!tableaux
 
-// tableau numerique 
+//! tableau numerique 
 $tab = ["pomme", "banane", "orange"];
 $tab2 = array("pomme", "banane", "orange"); // syntaxe historique 
 
-// pour inserer un element dans un tableau
+//! pour inserer un element dans un tableau
 $tab[] = "fraise"; // ajoute a la fin du tableau
 var_dump($tab);
 
-// tableau associatif 
+//! tableau associatif 
 
 $identite = [
     "prenom" => "sofiane",
@@ -52,15 +52,15 @@ $identite = [
     "age" => 24
 ];
 
-//boucle
-//for 
+//!boucle
+//!for 
 
 for ($i = 0; $i < 10; $i++){
     print "boucle FOR numero :". $i+1 . "<br>";
 }
 print "<br>";
 print "<br>";
-//While
+//!While
 $j = 0;
 while ($j < 10){
     print "boucle WHILE numero :". $j+1 . "<br>";
@@ -73,7 +73,7 @@ foreach ($tab as $fruit){
 }
 
 
-// tableau un peu plus complexe
+//! tableau un peu plus complexe
 
 $array =[
     "fruits" => ["pomme", "banane", "orange"],
